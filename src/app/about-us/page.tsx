@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PageHero } from "@/components/ui/PageHero";
 import { companyDetails, whyChooseUs } from "@/lib/constants";
 import { CheckCircle2 } from "lucide-react";
 import { Metadata } from "next";
@@ -10,17 +10,18 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-brand-darker min-h-screen pt-12 pb-24">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <div className="flex flex-col gap-16">
-          
-          {/* Intro Section */}
-          <section className="flex flex-col items-center text-center gap-6">
-            <SectionTitle
-              subtitle="Our Story"
-              title="About Us"
-              center
-            />
+    <>
+      <PageHero 
+        subtitle="Our Story" 
+        title="About Us" 
+        backgroundImage="/images/DryVan.jpg"
+      />
+      <div className="bg-brand-darker min-h-screen pt-16 pb-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex flex-col gap-16">
+            
+            {/* Intro Section */}
+            <section className="flex flex-col items-center text-center gap-6">
             <p className="text-xl text-gray-300 font-sans leading-relaxed mt-4">
               Welcome to <strong>{companyDetails.name}</strong> – your trusted
               partner in reliable and efficient truck dispatching services. We
@@ -68,5 +69,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

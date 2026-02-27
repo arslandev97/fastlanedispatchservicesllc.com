@@ -1,21 +1,21 @@
 "use client";
 
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PageHero } from "@/components/ui/PageHero";
 import { companyDetails } from "@/lib/constants";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export default function ContactPage() {
   return (
-    <div className="bg-brand-darker min-h-screen pt-12">
-      <div className="container mx-auto px-4 max-w-6xl pb-24">
-        {/* Header */}
-        <div className="mb-16">
-          <SectionTitle
-            subtitle="Contact Us"
-            title="Have Questions? Get in touch!"
-          />
-        </div>
+    <>
+      <PageHero 
+        subtitle="Contact Us" 
+        title="Have Questions? Get in touch!" 
+        backgroundImage="/images/PowerOnly.webp"
+      />
+      <div className="bg-brand-darker min-h-screen pt-16">
+        <div className="container mx-auto px-4 max-w-6xl pb-24">
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Details & Info */}
@@ -137,7 +137,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <div className="h-[500px] w-full mt-12 grayscale hover:grayscale-0 transition-all duration-1000">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x5366479cf186c3db%3A0xeab57baef1a4eed5!2s1001%20S%20Main%20St%20Ste%20600%2C%20Kalispell%2C%20MT%2059901%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+          src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=1001%20S%20Main%20St%20Ste%20600,%20Kalispell,%20MT%2059901,%20USA+(Fast%20Lane%20Dispatch%20Services%20LLC)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -148,5 +148,6 @@ export default function ContactPage() {
         ></iframe>
       </div>
     </div>
+    </>
   );
 }

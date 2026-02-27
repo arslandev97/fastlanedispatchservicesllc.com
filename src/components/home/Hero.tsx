@@ -12,7 +12,7 @@ export function Hero() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
           alt="Truck on highway"
           fill
           className="object-cover"

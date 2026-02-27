@@ -9,8 +9,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function ServicesPreview() {
-  // Show only first 6 services on home page
-  const previewServices = services.slice(0, 6);
+  // Show all services on home page
+  const previewServices = services;
 
   return (
     <section className="py-24 bg-[#050914] relative">
@@ -48,7 +48,7 @@ export function ServicesPreview() {
           className="mt-16"
         >
           <Button size="lg" asChild className="group">
-            <Link href="/services">
+            <Link href="/services" className="flex items-center justify-center">
               View All Services
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
